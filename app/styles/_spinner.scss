@@ -1,0 +1,16 @@
+.spinner-outer {
+  height: 700px;
+  width: 995px;
+  position: absolute;
+  z-index: 4000;
+
+}
+
+.spinner-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color:rgba(0,0,0,0.6);
+
+}
+

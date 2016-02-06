@@ -24,14 +24,20 @@ You must:<br>
 ●	Document your decisions.  Why did you choose to use library X?  Why choose bundler Y over bundler Z?<br>
 <br><br>
 Necessary graphical assets have been included in an assets folder.<br>
-
-TECH USED :<br>
+<br>
+Assets are in the assets folder<br>
+<br>
+<h2>TECH USED :</h2>
 Angular js <br>
 Grunt<br>
 NPM NODE JS<br>
 <br><br>
 To Run:<br>
 npm install && bower install<br>
+<br>
+<br>
+my-idea.png is my photoshop mock of improvements I would suggest.
+
 
 
 
