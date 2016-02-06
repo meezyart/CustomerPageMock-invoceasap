@@ -32,8 +32,8 @@ NPM NODE JS<br>
 <br>
 <h4>To Run:</h4>
 <b>npm install && bower install</b><br>
-For Dev: grunt serve
-To Build: grunt build
+For dev: <b>grunt serve</b><br>
+To build: <b>grunt build</b><br>
 <br>
 my-idea.png is my photoshop mock of improvements I would suggest.<br>
 <br>
