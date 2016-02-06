@@ -1,0 +1,27 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+
+//globals
+@import 'varibles';
+@import '_global';
+
+//views
+@import '_customers';
+
+//components
+@import '_animation';
+@import '_spinner';
+@import '_footer';
+@import "_header";
+
+//views
+
+body {
+  padding: 0;
+}
+
+
+
