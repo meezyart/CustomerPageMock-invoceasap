@@ -24,7 +24,8 @@ You must:<br>
 ●	Document your decisions.  Why did you choose to use library X?  Why choose bundler Y over bundler Z?<br>
 <br><br>
 Necessary graphical assets have been included in an <code>assets</code> folder.<br>
-<br>
+
+
 <h2>TECH USED :</h2>
 Angular js <br>
 Grunt<br>
