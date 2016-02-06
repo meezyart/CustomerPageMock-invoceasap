@@ -34,8 +34,9 @@ To Run:<br>
 npm install && bower install<br>
 <br>
 <br>
-my-idea.png is my photoshop mock of improvements I would suggest.
-
+my-idea.png is my photoshop mock of improvements I would suggest.<br>
+<br>
+Sample : http://meezyart.github.io/CustomerPageMock-invoceasap/#/
 
 
 
