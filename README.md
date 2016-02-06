@@ -25,8 +25,6 @@ You must:<br>
 <br><br>
 Necessary graphical assets have been included in an assets folder.<br>
 <br>
-Assets are in the assets folder<br>
-<br>
 <h2>TECH USED :</h2>
 Angular js <br>
 Grunt<br>
