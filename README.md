@@ -25,19 +25,19 @@ You must:<br>
 <br><br>
 Necessary graphical assets have been included in an <code>assets</code> folder.<br>
 
-
 <h2>TECH USED :</h2>
 Angular js <br>
 Grunt<br>
 NPM NODE JS<br>
-<br><br>
+<br>
 <h4>To Run:</h4>
 <b>npm install && bower install</b><br>
-<br>
+For Dev: grunt serve
+To Build: grunt build
 <br>
 my-idea.png is my photoshop mock of improvements I would suggest.<br>
 <br>
-Sample : http://meezyart.github.io/CustomerPageMock-invoceasap/#/
+Sample : <a href="http://meezyart.github.io/CustomerPageMock-invoceasap/#/" target="_blank">http://meezyart.github.io/CustomerPageMock-invoceasap/#/</a>
 
 
 
