@@ -23,20 +23,21 @@ You must:<br>
 ●	Ensure your implementation works in the most recent builds of the Chrome and Firefox.<br>
 ●	Document your decisions.  Why did you choose to use library X?  Why choose bundler Y over bundler Z?<br>
 <br><br>
-Necessary graphical assets have been included in an assets folder.<br>
-<br>
+Necessary graphical assets have been included in an <code>assets</code> folder.<br>
+
 <h2>TECH USED :</h2>
 Angular js <br>
 Grunt<br>
 NPM NODE JS<br>
-<br><br>
-To Run:<br>
-npm install && bower install<br>
 <br>
+<h4>To Run:</h4>
+<b>npm install && bower install</b><br>
+For dev: <b>grunt serve</b><br>
+To build: <b>grunt build</b><br>
 <br>
 my-idea.png is my photoshop mock of improvements I would suggest.<br>
 <br>
-Sample : http://meezyart.github.io/CustomerPageMock-invoceasap/#/
+Sample : <a href="http://meezyart.github.io/CustomerPageMock-invoceasap/#/" target="_blank">http://meezyart.github.io/CustomerPageMock-invoceasap/#/</a>
 
 
 
