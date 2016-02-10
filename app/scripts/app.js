@@ -56,6 +56,10 @@ angular
                     'customerStats@index': {
                         templateUrl: 'html/partial/customer-stats.html',
                         controller: 'CustomerController'
+                    },
+                    'customerContacts@index': {
+                        templateUrl: 'html/partial/customer-contacts.html',
+                        controller: 'CustomerController'
                     }
                 }
 

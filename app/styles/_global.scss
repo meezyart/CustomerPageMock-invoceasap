@@ -18,6 +18,14 @@ body {
   letter-spacing: 0;
 }
 
+button{
+  border: 0;
+  margin: 0;
+  outline: 0;
+  background: none;
+
+}
+
 //<==============  Buttons Universal ==================>
 
 .btn{
@@ -77,9 +85,15 @@ body {
 
 .glyphicon-envelope { &:before { content: url('../images/icon-send-2.png') !important;   } }
 .glyphicon-pencil    { &:before { content: url('../images/icon-edit-4.png') !important;   } }
+.glyphicon-plus    { &:before { content: url('../images/icon-add-5.png') !important;   } }
 
 //<==============  Colors  ==================>
 
 .green{
   color: $green;
+}
+
+
+.scroller{
+  overflow-y: scroll;
 }

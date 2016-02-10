@@ -24,6 +24,7 @@ angular.module('invoiceASAPApp').directive('tabs', function () {
         template: '<div class="tabbable">' +
 
             '<div class="section-heading"> '+
+                '<button class="glyphicon glyphicon-plus"></button>'+
                 '<ul class="nav nav-tabs">' +
                     '<li ng-repeat="pane in panes" ng-class="{active:pane.selected}">' +
                         '<a href="" ng-click="select(pane)">{{pane.title}}</a>' +

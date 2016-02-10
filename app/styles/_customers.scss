@@ -33,7 +33,16 @@
     color: #2d4c6b;
     font-size: 16px;
     background: #bfd3f1;
-    padding: 6px 15px;
+    padding: 6px 0 10px 15px;
+
+    button {
+      clear: both;
+      float: right;
+      height: 36px;
+      width: 36px;
+      margin-top: -8px;
+      display: inline-block;
+    }
   }
 
   .panel-heading {
@@ -122,10 +131,42 @@
 
   // customer Notes
   .customer-notes {
-    .panel-content{
+    .panel-content {
       //max-height: 969px;
       height: 969px;
-      overflow-y: auto;
+      padding: 0;
+      overflow: hidden;
+
+      .scroller{
+        height: 969px;
+        padding: 0 10px;
+      }
+    }
+    .add-note{
+      height: 0;
+      overflow: hidden;
+      margin-top: -10px;
+
+      transition: height .3s ease-out;
+      form{
+        padding: 20px;
+        .bg-grey{
+          background-color: #e6e6e6;
+        }
+
+        .button-group{
+          button{
+
+            width: 100px;
+            margin: 10px 0 0 20px;
+            border: 0;
+          }
+        }
+      }
+      &.open {
+        height: 400px;
+
+      }
     }
     .note-table {
       width: 100%;
@@ -136,10 +177,10 @@
 
       tbody {
         margin-bottom: 5px;
-        
+
         //display: block;
       }
-      .spacer{
+      .spacer {
         height: 40px;
       }
       .note-header {
@@ -150,7 +191,7 @@
           float: right;
         }
       }
-      .note-font-size{
+      .note-font-size {
         font-size: 12px;
       }
     }
@@ -160,17 +201,20 @@
   .customer-contacts {
     //@include clearfix;
 
-
     .section-heading {
       padding-bottom: 0;
+
+      button{
+        margin-top: -5px;
+      }
     }
     .panel-content {
       padding: 0 0 10px 0;
 
     }
-    .tab-pane{
+    .tab-pane {
       display: none;
-      &.active{
+      &.active {
         display: block;
       }
     }
@@ -181,74 +225,76 @@
 
       padding: 5px 10px;
     }
-    .nav > li:not(.active) > a  {
+    .nav > li:not(.active) > a {
       &:hover {
         background-color: #CBDDF7;
         border: none;
       }
     }
     .table {
-
+      margin-bottom: 0;
 
       & > tbody > tr > td {
         padding-left: 8px;
         padding-bottom: 4px;
         padding-top: 4px;
         font-weight: bold;
-        &:first-child{
+        &:first-child {
           padding-left: 15px;
         }
-        &:last-child{
+        &:last-child {
           width: 40px;
-          a{
+          a {
             margin-right: 10px;
           }
         }
 
-
       }
 
-
     }
-    .scroller{
 
-    }
   }
 
   //Mobile stuff
   @media screen and (max-width: 768px) {
     .customer-contacts {
       min-height: inherit;
-      .panel-content{
+      .panel-content {
         height: auto;
       }
     }
 
-    .customer-notes  {
+    .customer-notes {
       .panel-content {
         height: auto;
         max-height: 400px;
         overflow-y: auto;
+        padding-right: 10px;
+        .scroller{
+                height: auto;
+          overflow-y: auto;
+              }
       }
     }
+
 
   }
   //Desktop stuff
   @media screen and (min-width: 992px) {
     .customer-contacts {
-      .panel-content{
+      .panel-content {
         height: 310px;
 
       }
     }
-
-
-
+    .scroller {
+          height: 310px;
+          overflow-y: scroll;
+        }
 
   }
 
 }
-
 
 @mixin clearfix {
   &:before,
