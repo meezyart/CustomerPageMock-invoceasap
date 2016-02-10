@@ -10,11 +10,6 @@ angular.module('invoiceASAPApp').factory('CustomerService', function ($filter, $
 
     var customers, customerStats, customerNotes, customerGiud, customerDocumentStats;
     return  {
-        init: function () {
-
-        },
-
-
         loadCustomers: function () {
             return $http({
                 method: 'GET',
@@ -57,7 +52,7 @@ angular.module('invoiceASAPApp').factory('CustomerService', function ($filter, $
 
             }).success(function (data, status, headers, config) {
                 customerNotes = data['customer_notes'];
-                console.dir("customerNotes : " + customerNotes[0].id)
+                //console.dir("customerNotes : " + customerNotes[0].id)
             }).error(function (data, status, headers, config) {
                 console.log('Customer loading error: ' + status);
                 var errorMessage = "Sorry, an error occurred.";
@@ -77,7 +72,7 @@ angular.module('invoiceASAPApp').factory('CustomerService', function ($filter, $
 
             }).success(function (data, status, headers, config) {
                 customerDocumentStats = data['customer_document_stats'];
-                console.dir("sum_payments : " + customerDocumentStats.sum_payments)
+                //console.dir("sum_payments : " + customerDocumentStats.sum_payments)
             }).error(function (data, status, headers, config) {
                 console.log('Customer loading error: ' + status);
                 var errorMessage = "Sorry, an error occurred.";
@@ -106,8 +101,6 @@ angular.module('invoiceASAPApp').factory('CustomerService', function ($filter, $
 
             }
             return returnData;
-
-
         }
     };
 

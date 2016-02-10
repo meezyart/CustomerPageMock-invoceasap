@@ -8,17 +8,20 @@
  * Controller of the invoiceASAPApp
  */
 
-angular.module('invoiceASAPApp').controller('CustomerController', function ($state, $rootScope,$stateParams, $scope, CustomerService, $q) {
-
+angular.module('invoiceASAPApp').controller('CustomerController', function ($state, $rootScope, $stateParams, $scope, CustomerService, $q) {
+    $scope.openNote = false;
 
     $scope.customerguid = $stateParams.customerguid ? $stateParams.customerguid : "eb627abe-2735-11e4-ae4f-025ae7f06885";
 
     $scope.$on('$viewContentLoaded', function (event) {
         loadCustomerData($scope.customerguid);
+
+
     });
 
-// TODO put th
-// is in the resovle function for ui-manger in app
+
+
+
     function loadCustomerData(guid) {
 
         var dependencies = [
@@ -43,7 +46,9 @@ angular.module('invoiceASAPApp').controller('CustomerController', function ($sta
                 console.log('INFO: error ');
             }
         );
-    };
+    }
 
-
+    $scope.toggleNotes = function () {
+           $scope.openNote = !$scope.openNote;
+       };
 });

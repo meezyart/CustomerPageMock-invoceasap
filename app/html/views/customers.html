@@ -14,85 +14,53 @@
             <div class="row section-underline">
                 <!--Contact/Location Module-->
                 <div class="col-12-lg">
-                    <div class="section-panel customer-contacts">
-
-                        <tabs>
-                            <pane title="Jobs / Locations">
-                                <div class="table-responsive ">
-                                    <table class="table  table-hover table-striped fadeIn">
-                                        <thead>
-                                        <tr>
-                                            <th style="width: 90px">Actions</th>
-                                            <th>Name</th>
-                                            <th>Address</th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr ng-repeat="customers in customer.contacts">
-                                            <td><a href=""> <span class="glyphicon glyphicon-pencil"></span></a> <a
-                                                    href=""><span class="glyphicon glyphicon-envelope"></span></a></td>
-                                            <td>
-                                                <a href="#">{{ customers.email }}</a>
-                                            </td>
-                                            <td>{{ customers.billingaddress[0].addr1 }}<br>
-                                                {{ customers.billingaddress[0].city }}, {{ customers.billingaddress[0].state }} {{ customers.billingaddress[0].postalcode }}<br>
-                                                {{ customers.billingaddress[0].country }}
-                                            </td>
-                                            <td style="width:40px"><a href="#" class="delete-icon"></a></td>
-                                        </tr>
-                                        </tbody>
-
-                                    </table>
-                                </div>
-                            </pane>
-                            <pane title="Contacts">
-                                <div class="table-responsive">
-                                    <table class="table table-hover table-striped fadeIn">
-                                        <thead>
-                                        <tr>
-                                            <th style="width: 90px">Actions</th>
-                                            <th>Name</th>
-                                            <th>Phone</th>
-                                            <th>Email</th>
-                                            <th></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-
-
-                                        <tr ng-repeat="customers in customer.contacts">
-                                            <td><a href=""> <span class="glyphicon glyphicon-pencil"></span></a> <a
-                                                    href=""><span class="glyphicon glyphicon-envelope"></span></a></td>
-                                            <td>{{ customers.contactname }}</td>
-                                            <td>{{ customers.phone | tel}}</td>
-                                            <td>
-                                                <a href="#">{{ customers.email }}</a>
-                                            </td>
-                                            <td style="width:40px"><a href="#" class="delete-icon"></a></td>
-                                        </tr>
-
-                                        </tbody>
-
-                                    </table>
-                                </div>
-                            </pane>
-                        </tabs>
-
-                    </div>
+                    <div class="section-panel customer-contacts" ui-view="customerContacts"></div>
                 </div>
             </div>
         </section>
         <section class="col-sm-12 col-md-6 col-lg-6 noPad section-underline">
             <!--customer notes-->
             <div class="section-panel customer-notes" ui-view="customerNotes">
-                <div class="section-heading">Customer Notes</div>
+                <div class="section-heading">Customer Notes
+                    <button class="glyphicon glyphicon-plus" ng-click="toggleNotes()"></button>
+                </div>
                 <div class="panel-content">
-                    <div class="add-note">
+                    <div class="add-note section-underline " ng-class="{'open':openNote == true}">
+                        <form action="" >
 
+
+
+
+
+                            <fieldset class="form-group">
+                               <label for="exampleSelect1">Select a Customer</label>
+                               <select class="form-control" id="exampleSelect1">
+                                   <option value="Billy Bob Jenkins" selected>Billy Bob Jenkins</option>
+                                   <option value="Billy Bob Jenkins" >Billy Bob Jenkins</option>
+                                   <option value="Billy Bob Jenkins" >Billy Bob Jenkins</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                                 <option>5</option>
+                               </select>
+                             </fieldset>
+
+                            <fieldset class="form-group">
+                               <label for="insert-note">Add Note Below</label>
+                               <textarea class="form-control" id="insert-note"  rows="10" cols="100"></textarea>
+                             </fieldset>
+                            <div class="button-group pull-right">
+                                <button class="btn btn-sm bg-success">Save</button>
+                                <button ng-click="toggleNotes()" class="btn btn-sm bg-grey" >Cancel</button>
+
+                            </div>
+                            <strong>Saturday May 15, 2016 </strong>
+
+
+                        </form>
 
                     </div>
-                    <div>
+                    <div class="scroller">
                         <table class="note-table" ng-repeat="note in notes">
                             <tbody>
                             <tr class="note-header">
