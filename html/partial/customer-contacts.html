@@ -1,0 +1,73 @@
+<tabs>
+    <pane title="Jobs / Locations">
+        <div class="table-responsive fadeIn">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th style="width: 90px">Actions</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th></th>
+                </tr>
+
+            </table>
+            <div class="table-responsive scroller">
+                <table class="table table-hover table-striped">
+                    <tbody>
+                    <tr ng-repeat="customers in customer.contacts">
+                        <td><a href=""> <span class="glyphicon glyphicon-pencil"></span></a> <a
+                                href=""><span class="glyphicon glyphicon-envelope"></span></a>
+                        </td>
+                        <td>
+                            <a href="#">{{ customers.email }}</a>
+                        </td>
+                        <td>{{ customers.billingaddress[0].addr1 }}<br>
+                            {{ customers.billingaddress[0].city }}, {{
+                            customers.billingaddress[0].state }} {{
+                            customers.billingaddress[0].postalcode }}<br>
+                            {{ customers.billingaddress[0].country }}
+                        </td>
+                        <td style="width:40px"><a href="#" class="delete-icon"></a></td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </pane>
+    <pane title="Contacts">
+        <div class="table-responsive fadeIn">
+            <table class="table ">
+                <thead>
+                <tr>
+                    <th style="width: 90px">Actions</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+                </thead>
+
+            </table>
+            <div class="table-responsive scroller">
+                <table class="table table-hover table-striped">
+                    <tbody>
+                    <tr ng-repeat="customers in customer.contacts">
+                        <td><a href=""> <span class="glyphicon glyphicon-pencil"></span></a> <a
+                                href=""><span class="glyphicon glyphicon-envelope"></span></a>
+                        </td>
+                        <td>{{ customers.contactname }}</td>
+                        <td>{{ customers.phone | tel}}</td>
+                        <td>
+                            <a href="#">{{ customers.email }}</a>
+                        </td>
+                        <td style="width:40px"><a href="#" class="delete-icon"></a></td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </pane>
+</tabs>
